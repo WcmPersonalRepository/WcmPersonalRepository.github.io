@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>移动端兼容性问题 | 石马衣申</title>
+    <meta name="description" content="石马衣申">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.b69c0bdb.css" as="style"><link rel="preload" href="/assets/js/app.d43afa29.js" as="script"><link rel="preload" href="/assets/js/2.44c2a658.js" as="script"><link rel="preload" href="/assets/js/9.71cf88c5.js" as="script"><link rel="prefetch" href="/assets/js/10.624928b3.js"><link rel="prefetch" href="/assets/js/11.19f77676.js"><link rel="prefetch" href="/assets/js/12.a01d1c53.js"><link rel="prefetch" href="/assets/js/3.c7a95e64.js"><link rel="prefetch" href="/assets/js/4.bff5f237.js"><link rel="prefetch" href="/assets/js/5.0da78d3d.js"><link rel="prefetch" href="/assets/js/6.38505f3f.js"><link rel="prefetch" href="/assets/js/7.13a29d2e.js"><link rel="prefetch" href="/assets/js/8.011a111f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b69c0bdb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">石马衣申</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div> <a href="https://github.com/WcmPersonalRepository/wcmblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div> <a href="https://github.com/WcmPersonalRepository/wcmblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/articles/mobile_bugs.html" class="active sidebar-link">移动端兼容性问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/mobile_bugs.html#iso-input-自动填充背景黄色" class="sidebar-link">ISO input 自动填充背景黄色</a></li><li class="sidebar-sub-header"><a href="/articles/mobile_bugs.html#iso-new-date-问题" class="sidebar-link">ISO new Date()问题</a></li><li class="sidebar-sub-header"><a href="/articles/mobile_bugs.html#移动端输入框被遮挡问题" class="sidebar-link">移动端输入框被遮挡问题</a></li><li class="sidebar-sub-header"><a href="/articles/mobile_bugs.html#ios-浏览器-video-自动全屏" class="sidebar-link">iOS 浏览器 video 自动全屏</a></li><li class="sidebar-sub-header"><a href="/articles/mobile_bugs.html#ios-键盘弹起把页面弹起回落" class="sidebar-link">ios 键盘弹起把页面弹起回落</a></li><li class="sidebar-sub-header"><a href="/articles/mobile_bugs.html#微信浏览器中保存长按保存解决方案" class="sidebar-link">微信浏览器中保存长按保存解决方案</a></li><li class="sidebar-sub-header"><a href="/articles/mobile_bugs.html#识别-360-浏览器的方法" class="sidebar-link">识别 360 浏览器的方法</a></li></ul></li><li><a href="/articles/interview.html" class="sidebar-link">面试相关</a></li><li><a href="/articles/mobile_advance.html" class="sidebar-link">移动端优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/mobile_advance.html#键盘显示搜索按钮" class="sidebar-link">键盘显示搜索按钮</a></li><li class="sidebar-sub-header"><a href="/articles/mobile_advance.html#修改-search-的默认样式" class="sidebar-link">修改 search 的默认样式</a></li></ul></li><li><a href="/articles/chrome.html" class="sidebar-link">chrome 相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/chrome.html#离线安装-react-devtools" class="sidebar-link">离线安装 react-devtools</a></li></ul></li><li><a href="/articles/vscode_about.html" class="sidebar-link">vscode 相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/vscode_about.html#报错自动格式化-react-代码" class="sidebar-link">报错自动格式化 react 代码</a></li></ul></li><li><a href="/articles/webrtc.html" class="sidebar-link">webrtc 入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/articles/webrtc.html#什么是-webrtc" class="sidebar-link">什么是 webrtc</a></li><li class="sidebar-sub-header"><a href="/articles/webrtc.html#webrtc-能干什么" class="sidebar-link">webrtc 能干什么</a></li><li class="sidebar-sub-header"><a href="/articles/webrtc.html#webrtc-怎么用" class="sidebar-link">webrtc 怎么用</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="移动端兼容性问题"><a href="#移动端兼容性问题" aria-hidden="true" class="header-anchor">#</a> 移动端兼容性问题</h1> <h2 id="iso-input-自动填充背景黄色"><a href="#iso-input-自动填充背景黄色" aria-hidden="true" class="header-anchor">#</a> ISO input 自动填充背景黄色</h2> <p>问题描述：iOS 部分 Safari 浏览器版本从外部复制粘贴内容到 input 输入框中，会出现黄色背景。原因是复制粘贴触发了浏览器的自动填充伪类：-webkit-autofill</p> <p>解决方案 1 ：用阴影填充</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill</span> <span class="token punctuation">{</span>
+  <span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> 0 0 0 1000px white inset<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>解决方案 2 ：修改成透明色</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">input[type='text']</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #333333 <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0px 12px 0px 32px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> transparent <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">input[type='password']</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #333333 <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0px 12px 0px 32px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> transparent <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@-webkit-keyframes</span> autofill</span> <span class="token punctuation">{</span>
+  <span class="token selector">to</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #666<span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">input:-webkit-autofill</span> <span class="token punctuation">{</span>
+  <span class="token property">animation-name</span><span class="token punctuation">:</span> autofill <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">animation-fill-mode</span><span class="token punctuation">:</span> both <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus</span> <span class="token punctuation">{</span>
+  <span class="token property">background-clip</span><span class="token punctuation">:</span> content-box <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="iso-new-date-问题"><a href="#iso-new-date-问题" aria-hidden="true" class="header-anchor">#</a> ISO new Date()问题</h2> <p>问题描述：苹果的 Safari 浏览器中 new Date()创建实例是传入类似 yyyy-MM-dd hh:mm:ss 时间字符串无论传入什么时间，都会得到 1970 年 1 月 1 日或 Invalid Date 的情况。原因是在苹果的 Safari 浏览器中想用时间字符串创建时间日期分隔符必须为“/”，即类似 yyy/MM/dd hh:mm:ss 的时间字符串格式</p> <p>解决方案：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019/02/02 08:08:08'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="移动端输入框被遮挡问题"><a href="#移动端输入框被遮挡问题" aria-hidden="true" class="header-anchor">#</a> 移动端输入框被遮挡问题</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollTop <span class="token operator">=</span> document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollHeight
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="ios-浏览器-video-自动全屏"><a href="#ios-浏览器-video-自动全屏" aria-hidden="true" class="header-anchor">#</a> iOS 浏览器 video 自动全屏</h2> <p>问题描述：在 iOS 浏览器中的 video 元素，会出现自动全屏的情况</p> <div class="tip custom-block"><p class="custom-block-title">官网描述</p> <p>You must set this property to play inline video. Set this property to true to play videos inline. Set this property to false to use the native full-screen controller. When adding a video element to a HTML document on the iPhone, you must also include the playsinline attribute.</p></div> <div class="tip custom-block"><p class="custom-block-title">官网描述</p> <p>Apps created before iOS 10.0 must use the webkit-playsinline attribute.</p></div> <p>解决方案：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">playsinline</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span> <span class="token attr-name">webkit-playsinline</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="ios-键盘弹起把页面弹起回落"><a href="#ios-键盘弹起把页面弹起回落" aria-hidden="true" class="header-anchor">#</a> ios 键盘弹起把页面弹起回落</h2> <p>问题描述：在 iOS 浏览器中当输入框键盘弹起输入完成后，页面无法自动回落</p> <p>解决方案：</p> <div class="language-js extra-class"><pre class="language-js"><code>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollTop <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollTop <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="微信浏览器中保存长按保存解决方案"><a href="#微信浏览器中保存长按保存解决方案" aria-hidden="true" class="header-anchor">#</a> 微信浏览器中保存长按保存解决方案</h2> <p>问题描述：微信浏览器中可能会出现长按图片不弹起保存图片菜单的情况</p> <p>解决方案：给图片添加以下样式</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">-webkit-touch-callout</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+</code></pre></div><h2 id="识别-360-浏览器的方法"><a href="#识别-360-浏览器的方法" aria-hidden="true" class="header-anchor">#</a> 识别 360 浏览器的方法</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//方案1：www.360.com域名下360浏览器极速模式下</span>
+navigator<span class="token punctuation">.</span>userAgent <span class="token operator">=</span>
+  <span class="token string">'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36 QIHU 360EE'</span>
+
+<span class="token comment">//方案2：</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//application/vnd.chromium.remoting-viewer 可能为360特有</span>
+  <span class="token keyword">var</span> is360 <span class="token operator">=</span> <span class="token function">_mime</span><span class="token punctuation">(</span><span class="token string">'type'</span><span class="token punctuation">,</span> <span class="token string">'application/vnd.chromium.remoting-viewer'</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isChrome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> is360<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'检测到是360浏览器'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//检测是否是谷歌内核(可排除360及谷歌以外的浏览器)</span>
+<span class="token keyword">function</span> <span class="token function">isChrome</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> ua <span class="token operator">=</span> navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> ua<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'chrome'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//测试mime</span>
+<span class="token keyword">function</span> <span class="token function">_mime</span><span class="token punctuation">(</span><span class="token parameter">option<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> mimeTypes <span class="token operator">=</span> navigator<span class="token punctuation">.</span>mimeTypes
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> mt <span class="token keyword">in</span> mimeTypes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>mimeTypes<span class="token punctuation">[</span>mt<span class="token punctuation">]</span><span class="token punctuation">[</span>option<span class="token punctuation">]</span> <span class="token operator">==</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//方案3：</span>
+<span class="token keyword">function</span> <span class="token function">is360</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'Chrome'</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> window<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>webkitPersistentStorage<span class="token operator">?</span><span class="token boolean">false</span><span class="token punctuation">:</span><span class="token boolean">true</span>
+  <span class="token punctuation">}</span>esle<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//方案4：</span>
+<span class="token comment">/**
+ * 1. 获取ua字符串
+ * $.ua().ua;
+ *
+ * 2. 设置ua字符串
+ * $.ua(&quot;string&quot;);
+ *
+ * 3. 获取参数
+ * $.ua().platform;
+ * $.ua().browser;
+ * $.ua().engine;
+ *
+ * 4. 内核判断
+ * $.ua().isWebkit;
+ * $.ua().isGecko;
+ * $.ua().isTrident;
+ *
+ * 4. 外壳判断
+ * $.ua().isChrome;
+ * $.ua().isFirefox;
+ * $.ua().is360se;
+ * $.ua().is360ee;
+ * $.ua().isLiebao;
+ * $.ua().isSougou;
+ * $.ua().ie;
+ * $.ua().isIe;
+ * $.ua().isIe6;
+ * $.ua().isIe7;
+ * $.ua().isIe8;
+ * $.ua().isIe9;
+ * $.ua().isIe10;
+ * $.ua().isIe11;
+ */</span>
+<span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">$<span class="token punctuation">,</span> win<span class="token punctuation">,</span> <span class="token keyword">undefined</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> <span class="token constant">UA</span> <span class="token operator">=</span> win<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">,</span>
+        doc <span class="token operator">=</span> win<span class="token punctuation">.</span>document<span class="token punctuation">,</span>
+        parseRule <span class="token operator">=</span> <span class="token punctuation">{</span>
+            platforms<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token comment">// windows phone</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'windows phone'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'windows phone os '</span><span class="token punctuation">,</span>
+                    versionNames<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token comment">// windows phone must be tested before win</span>
+                        <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'7.5'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'mango'</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// windows</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'win'</span><span class="token punctuation">,</span>
+                    slugName<span class="token punctuation">:</span> <span class="token string">'windows'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'windows(?: nt)? '</span><span class="token punctuation">,</span>
+                    versionNames<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'6.2'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'windows 8'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'6.1'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'windows 7'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'6.0'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'windows vista'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'5.2'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'windows xp'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'5.1'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'windows xp'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'5.0'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'windows 2000'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// ipad</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'ipad'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'cpu os '</span><span class="token punctuation">,</span>
+                    flags<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'ios'</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// ipad and ipod must be tested before iphone</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'ipod'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'iphone os '</span><span class="token punctuation">,</span>
+                    flags<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'ios'</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// iphone</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'iphone'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'iphone os '</span><span class="token punctuation">,</span>
+                    flags<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'ios'</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// iphone must be tested before mac</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'mac'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'os x '</span><span class="token punctuation">,</span>
+                    versionNames<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.8'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'mountainlion'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.7'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'lion'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.6'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'snowleopard'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.5'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'leopard'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.4'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'tiger'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.3'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'panther'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.2'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'jaguar'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.1'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'puma'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        number<span class="token punctuation">:</span> <span class="token string">'10.0'</span><span class="token punctuation">,</span>
+                        name<span class="token punctuation">:</span> <span class="token string">'cheetah'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// android</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'android'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'android '</span><span class="token punctuation">,</span>
+                    versionNames<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                        <span class="token comment">// android must be tested before linux</span>
+                        <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'4.1'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'jellybean'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'4.0'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'icecream sandwich'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'3.'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'honey comb'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'2.3'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'ginger bread'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'2.2'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'froyo'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'2.'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'eclair'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'1.6'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'donut'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                            number<span class="token punctuation">:</span> <span class="token string">'1.5'</span><span class="token punctuation">,</span>
+                            name<span class="token punctuation">:</span> <span class="token string">'cupcake'</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// blackberry</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'blackberry'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'(?:blackberry\\d{4}[a-z]?|version)/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// blackberry</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'bb'</span><span class="token punctuation">,</span>
+                    slugName<span class="token punctuation">:</span> <span class="token string">'blackberry'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'(?:version)/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// blackberry</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'playbook'</span><span class="token punctuation">,</span>
+                    slugName<span class="token punctuation">:</span> <span class="token string">'blackberry'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'(?:version)/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// linux</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'linux'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment">// nokia</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'nokia'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            browsers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'iemobile'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'iemobile/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// iemobile must be tested before msie</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'msie'</span><span class="token punctuation">,</span>
+                    slugName<span class="token punctuation">:</span> <span class="token string">'ie'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'msie '</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'firefox'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'firefox/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'chrome'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'chrome/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// chrome must be tested before safari</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'safari'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'(?:browser|version)/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'opera'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'version/'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            engines<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'trident'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'trident/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'webkit'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'webkit/'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// webkit must be tested before gecko</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'gecko'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'rv:'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                    name<span class="token punctuation">:</span> <span class="token string">'presto'</span><span class="token punctuation">,</span>
+                    versionSearch<span class="token punctuation">:</span> <span class="token string">'presto/'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// [10,)版本就无法判断</span>
+        ieVer <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> v <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span>
+                p <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                all <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'i'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>
+                p<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'&lt;!--[if gt IE '</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token operator">++</span>v<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">']&gt;&lt;i&gt;&lt;/i&gt;&lt;![endif]--&gt;'</span><span class="token punctuation">,</span>
+                all<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> v <span class="token operator">&gt;</span> <span class="token number">4</span> <span class="token operator">?</span> v <span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        ieAX <span class="token operator">=</span> win<span class="token punctuation">.</span>ActiveXObject<span class="token punctuation">,</span>
+        ieMode <span class="token operator">=</span> doc<span class="token punctuation">.</span>documentMode<span class="token punctuation">,</span>
+        isIe <span class="token operator">=</span> ieAX <span class="token operator">||</span> ieMode<span class="token punctuation">,</span>
+        isIe6 <span class="token operator">=</span> <span class="token punctuation">(</span>ieAX <span class="token operator">&amp;&amp;</span> ieVer <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>ieMode <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        isIe7 <span class="token operator">=</span> <span class="token punctuation">(</span>ieAX <span class="token operator">&amp;&amp;</span> ieVer <span class="token operator">==</span> <span class="token number">7</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>ieMode <span class="token operator">==</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        isIe8 <span class="token operator">=</span> <span class="token punctuation">(</span>ieAX <span class="token operator">&amp;&amp;</span> ieVer <span class="token operator">==</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>ieMode <span class="token operator">==</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        isIe9 <span class="token operator">=</span> <span class="token punctuation">(</span>ieAX <span class="token operator">&amp;&amp;</span> ieVer <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>ieMode <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        isIe10 <span class="token operator">=</span> ieMode <span class="token operator">===</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        isIe11 <span class="token operator">=</span> ieMode <span class="token operator">===</span> <span class="token number">11</span><span class="token punctuation">,</span>
+        isChrome <span class="token operator">=</span> <span class="token operator">!</span>isIe <span class="token operator">&amp;&amp;</span> <span class="token function">_mime</span><span class="token punctuation">(</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;application/vnd.chromium.remoting-viewer&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        isLiebao <span class="token operator">=</span> <span class="token operator">!</span>isIe <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token operator">!</span> win<span class="token punctuation">.</span>external <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token operator">!</span> win<span class="token punctuation">.</span>external<span class="token punctuation">.</span>LiebaoAutoFill_CopyToClipboard<span class="token punctuation">,</span>
+        is360ee <span class="token operator">=</span> <span class="token operator">!</span>isIe <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isChrome <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isLiebao <span class="token operator">&amp;&amp;</span> <span class="token function">_plugins</span><span class="token punctuation">(</span><span class="token string">&quot;filename&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;pepflashplayer.dll&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        is360se <span class="token operator">=</span> <span class="token operator">!</span>isIe <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>is360ee <span class="token operator">&amp;&amp;</span> <span class="token function">_mime</span><span class="token punctuation">(</span><span class="token string">&quot;suffixes&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;dll&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;description&quot;</span><span class="token punctuation">,</span> <span class="token regex">/fancy/</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        isSougou <span class="token operator">=</span> <span class="token operator">!</span>isIe <span class="token operator">&amp;&amp;</span> <span class="token function">_plugins</span><span class="token punctuation">(</span><span class="token string">&quot;filename&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;NPComBrg310.dll&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        isFirefox <span class="token operator">=</span> win<span class="token punctuation">.</span>scrollMaxX <span class="token operator">!==</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isIe6<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ieVer <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>isIe7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ieVer <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>isIe8<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ieVer <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>isIe9<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ieVer <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>isIe10<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ieVer <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>isIe11<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ieVer <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    $<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token function-variable function">ua</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> args <span class="token operator">=</span> arguments<span class="token punctuation">,</span>
+                argL <span class="token operator">=</span> args<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+                ua <span class="token operator">=</span> <span class="token punctuation">(</span>argL <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> $<span class="token punctuation">.</span><span class="token function">type</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">&quot;string&quot;</span> <span class="token operator">?</span> args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token constant">UA</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                objPlatform <span class="token operator">=</span> <span class="token function">_parse</span><span class="token punctuation">(</span>parseRule<span class="token punctuation">.</span>platforms<span class="token punctuation">,</span> ua<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                objBrowser <span class="token operator">=</span> <span class="token function">_parse</span><span class="token punctuation">(</span>parseRule<span class="token punctuation">.</span>browsers<span class="token punctuation">,</span> ua<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                objEngine <span class="token operator">=</span> <span class="token function">_parse</span><span class="token punctuation">(</span>parseRule<span class="token punctuation">.</span>engines<span class="token punctuation">,</span> ua<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 返回ua字符串</span>
+                ua<span class="token punctuation">:</span> ua<span class="token punctuation">,</span>
+                <span class="token comment">// 操作平台</span>
+                platform<span class="token punctuation">:</span> $<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> objPlatform<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                    os<span class="token punctuation">:</span> win<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>platform<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    plugins<span class="token punctuation">:</span> win<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>plugins
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token comment">// 浏览器内核</span>
+                engine<span class="token punctuation">:</span> objEngine<span class="token punctuation">,</span>
+                <span class="token comment">// 浏览器外壳</span>
+                browser<span class="token punctuation">:</span> objBrowser<span class="token punctuation">,</span>
+                <span class="token comment">// ie</span>
+                isIe<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span> ieVer<span class="token punctuation">,</span>
+                isIe6<span class="token punctuation">:</span> isIe6<span class="token punctuation">,</span>
+                isIe7<span class="token punctuation">:</span> isIe7<span class="token punctuation">,</span>
+                isIe8<span class="token punctuation">:</span> isIe8<span class="token punctuation">,</span>
+                isIe9<span class="token punctuation">:</span> isIe9<span class="token punctuation">,</span>
+                isIe10<span class="token punctuation">:</span> isIe10<span class="token punctuation">,</span>
+                isIe11<span class="token punctuation">:</span> isIe11<span class="token punctuation">,</span>
+                ie<span class="token punctuation">:</span> ieVer<span class="token punctuation">,</span>
+                <span class="token comment">// 内核</span>
+                isWebkit<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span> objEngine<span class="token punctuation">.</span>isWebkit<span class="token punctuation">,</span>
+                isGecko<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span> objEngine<span class="token punctuation">.</span>isGecko<span class="token punctuation">,</span>
+                isTrident<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span> objEngine<span class="token punctuation">.</span>isTrident<span class="token punctuation">,</span>
+                <span class="token comment">// 外壳[优先特征判断]</span>
+                isChrome<span class="token punctuation">:</span> isChrome<span class="token punctuation">,</span>
+                is360ee<span class="token punctuation">:</span> is360ee<span class="token punctuation">,</span>
+                is360se<span class="token punctuation">:</span> is360se<span class="token punctuation">,</span>
+                isSougou<span class="token punctuation">:</span> isSougou<span class="token punctuation">,</span>
+                isLiebao<span class="token punctuation">:</span> isLiebao<span class="token punctuation">,</span>
+                isFirefox<span class="token punctuation">:</span> isFirefox<span class="token punctuation">,</span>
+                <span class="token comment">// 类型</span>
+                isMobile<span class="token punctuation">:</span> objPlatform<span class="token punctuation">.</span>isMobile<span class="token punctuation">,</span>
+                isTablet<span class="token punctuation">:</span> objPlatform<span class="token punctuation">.</span>isTablet<span class="token punctuation">,</span>
+                isDesktop<span class="token punctuation">:</span> objPlatform<span class="token punctuation">.</span>isDesktop
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * 解析
+     * 参考：https://github.com/terkel/jquery-ua
+     * @param  {Array} 需要解析的数据
+     * @param  {String} 需要解析的ua字符串
+     * @param  {Boolean} 是否为解析浏览器数据
+     * @return {Object} 解析后的对象
+     * @version 1.0
+     * 2013年9月27日13:36:47
+     */</span>
+    <span class="token keyword">function</span> <span class="token function">_parse</span><span class="token punctuation">(</span><span class="token parameter">rule<span class="token punctuation">,</span> ua<span class="token punctuation">,</span> isBrowser</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> item <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">,</span>
+            versionSearch<span class="token punctuation">,</span>
+            flags<span class="token punctuation">,</span>
+            versionNames<span class="token punctuation">,</span>
+            i<span class="token punctuation">,</span>
+            is<span class="token punctuation">,</span>
+            ic<span class="token punctuation">,</span>
+            j<span class="token punctuation">,</span>
+            js<span class="token punctuation">,</span>
+            jc<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isBrowser <span class="token operator">&amp;&amp;</span> ieVer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                name<span class="token punctuation">:</span> <span class="token string">&quot;ie&quot;</span><span class="token punctuation">,</span>
+                ie<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                version<span class="token punctuation">:</span> ieVer<span class="token punctuation">,</span>
+                isIe<span class="token punctuation">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> is <span class="token operator">=</span> rule<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> is<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ic <span class="token operator">=</span> rule<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            name <span class="token operator">=</span> ic<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+            versionSearch <span class="token operator">=</span> ic<span class="token punctuation">.</span>versionSearch<span class="token punctuation">;</span>
+            flags <span class="token operator">=</span> ic<span class="token punctuation">.</span>flags<span class="token punctuation">;</span>
+            versionNames <span class="token operator">=</span> ic<span class="token punctuation">.</span>versionNames<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>ua<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                item<span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/\s/g</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>ic<span class="token punctuation">.</span>slugName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    item<span class="token punctuation">.</span>name <span class="token operator">=</span> ic<span class="token punctuation">.</span>slugName<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                item<span class="token punctuation">[</span><span class="token string">&quot;is&quot;</span> <span class="token operator">+</span> <span class="token function">_upperCase1st</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                item<span class="token punctuation">.</span>version <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">''</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>versionSearch <span class="token operator">+</span> <span class="token string">'(\\d+((\\.|_)\\d+)*)'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span>ua<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/_/g</span><span class="token punctuation">,</span> <span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>flags<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> js <span class="token operator">=</span> flags<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> js<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        item<span class="token punctuation">[</span><span class="token string">&quot;is&quot;</span> <span class="token operator">+</span> <span class="token function">_upperCase1st</span><span class="token punctuation">(</span>flags<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>versionNames<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> js <span class="token operator">=</span> versionNames<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> js<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        jc <span class="token operator">=</span> versionNames<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>version<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>jc<span class="token punctuation">.</span>number<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            item<span class="token punctuation">.</span>fullname <span class="token operator">=</span> jc<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+                            item<span class="token punctuation">[</span><span class="token string">&quot;is&quot;</span> <span class="token operator">+</span> <span class="token function">_upperCase1st</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>fullname<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                            <span class="token keyword">break</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>rule <span class="token operator">===</span> parseRule<span class="token punctuation">.</span>platforms<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    item<span class="token punctuation">.</span>isMobile <span class="token operator">=</span> <span class="token regex">/mobile|phone/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>ua<span class="token punctuation">)</span> <span class="token operator">||</span> item<span class="token punctuation">.</span>isBlackberry<span class="token punctuation">;</span>
+                    item<span class="token punctuation">.</span>isMobile <span class="token operator">=</span> item<span class="token punctuation">.</span>isMobile <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">?</span> <span class="token boolean">false</span> <span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                    item<span class="token punctuation">.</span>isTablet <span class="token operator">=</span> <span class="token regex">/tablet/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>ua<span class="token punctuation">)</span> <span class="token operator">||</span> item<span class="token punctuation">.</span>isIpad <span class="token operator">||</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>isAndroid <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token regex">/mobile/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>ua<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    item<span class="token punctuation">.</span>isTablet <span class="token operator">=</span> item<span class="token punctuation">.</span>isTablet <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">?</span> <span class="token boolean">false</span> <span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>isTablet<span class="token punctuation">)</span> item<span class="token punctuation">.</span>isMobile <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                    item<span class="token punctuation">.</span>isDesktop <span class="token operator">=</span> <span class="token operator">!</span>item<span class="token punctuation">.</span>isMobile <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>item<span class="token punctuation">.</span>isTablet <span class="token operator">?</span> <span class="token boolean">true</span> <span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>ios<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        item<span class="token punctuation">.</span>fullname <span class="token operator">=</span> <span class="token string">'ios'</span> <span class="token operator">+</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>version<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        item<span class="token punctuation">[</span><span class="token string">&quot;is&quot;</span> <span class="token operator">+</span> <span class="token function">_upperCase1st</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>fullname<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>item<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            item<span class="token punctuation">[</span><span class="token string">'isUnknown'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            item<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+            item<span class="token punctuation">.</span>version <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> item<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 大写第一个字母</span>
+    <span class="token keyword">function</span> <span class="token function">_upperCase1st</span><span class="token punctuation">(</span><span class="token parameter">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> string<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/^(\w)/</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">w</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> w<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 测试mime</span>
+    <span class="token keyword">function</span> <span class="token function">_mime</span><span class="token punctuation">(</span><span class="token parameter">where<span class="token punctuation">,</span> value<span class="token punctuation">,</span> name<span class="token punctuation">,</span> nameReg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> mimeTypes <span class="token operator">=</span> win<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>mimeTypes<span class="token punctuation">,</span>
+            i<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> mimeTypes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>mimeTypes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>where<span class="token punctuation">]</span> <span class="token operator">==</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">!==</span> <span class="token keyword">undefined</span> <span class="token operator">&amp;&amp;</span> nameReg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>mimeTypes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 测试plugins</span>
+    <span class="token keyword">function</span> <span class="token function">_plugins</span><span class="token punctuation">(</span><span class="token parameter">where<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> plugins <span class="token operator">=</span> win<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>plugins<span class="token punctuation">,</span>
+            i<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> plugins<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>plugins<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>where<span class="token punctuation">]</span> <span class="token operator">==</span> value<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>jQuery<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新时间: </span> <span class="time">7/28/2019, 11:45:51 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/articles/interview.html">
+          面试相关
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d43afa29.js" defer></script><script src="/assets/js/2.44c2a658.js" defer></script><script src="/assets/js/9.71cf88c5.js" defer></script>
+  </body>
+</html>
